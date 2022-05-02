@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <p>TIC-TAC-TOE</p>
+    </header>
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+
+    <div class="subTitle">X's Turn</div>
+    <button class="resetGame" onclick="resetGame()">Reset Game</button>
+    <footer>
+      <p>
+        &#9400; 2022
+        <a href="https://www.facebook.com/uniquedevnp" target="blank"
+          >Alex Sharma</a
+        >
+      </p>
+    </footer>
+
+    <div class="winState">
+      <p class="win-Title">Game Over</p>
+      <p class="win-summary">X won the game</p>
+      <button onclick="resetGame()">Reset Game</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

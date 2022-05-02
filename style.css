@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital@1&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Serif", serif;
+}
+
+body {
+  background-color: rgb(136, 207, 207);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: cyan;
+  padding: 0.5rem;
+  width: 100vw;
+}
+
+header > p {
+  font-size: xx-large;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5rem;
+}
+
+.container {
+  display: grid;
+  background-color: black;
+  height: 60vh;
+  aspect-ratio: 4/3;
+  margin: 10vh auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.container .item {
+  cursor: pointer;
+  background-color: aliceblue;
+}
+
+.container .item:hover {
+  background-color: rgb(137, 187, 235);
+}
+
+.circle {
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-image: url('https://www.transparentpng.com/thumb/circle/luetfC-red-circle-free-transparent.png'); */
+  background-image: url("assets/circle.png");
+}
+
+.cross {
+  height: 100%;
+  width: 100%;
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-image: url('https://www.transparentpng.com/thumb/red-cross/dU1a5L-flag-x-mark-clip-art-computer-icons.png'); */
+  background-image: url("assets/cross.png");
+}
+
+.circle:hover,
+.cross:hover {
+  background-color: aliceblue !important;
+  cursor: not-allowed;
+}
+
+.winState {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(61, 77, 77, 0.89);
+  z-index: 99;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: enter 1.5s linear 1;
+}
+
+.win-Title {
+  text-align: center;
+  font-size: xx-large;
+  margin-top: 23vh;
+  font-weight: bolder;
+  color: red;
+}
+
+.win-summary {
+  text-align: center;
+  margin-top: 10vh;
+  font-size: larger;
+  font-weight: bold;
+  color: gold;
+}
+
+.winState > button {
+  cursor: pointer;
+  margin-top: 10vh;
+  padding: 2vw 5vw;
+  font-size: large;
+  color: cyan;
+  background-color: black;
+  box-shadow: 0px 0px 12px 10px rgb(22, 126, 223);
+  transition-duration: 300ms;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.winState > button:focus,
+.winState > button:hover {
+  background-color: antiquewhite;
+  color: black;
+  box-shadow: 0px 0px 12px 10px rgb(173, 153, 39);
+}
+
+.subTitle {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+}
+
+footer {
+  background-color: cyan;
+  height: 8vh;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resetGame {
+  position: absolute;
+  bottom: 9vh;
+  right: 2vw;
+  padding: 1vw 2vw;
+  cursor: pointer;
+  background-color: rgb(55, 179, 55);
+  border: 0;
+  color: wheat;
+  transition-duration: 300ms;
+}
+
+.resetGame:hover {
+  background-color: rgb(21, 241, 21);
+  color: blue;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
