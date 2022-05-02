@@ -7,8 +7,6 @@ clickaudio.src = "assets/add.wav";
 resetaudio.src = "assets/reset.mp3";
 
 winaudio.playbackRate = 2;
-console.log(winaudio.playbackRate);
-
 winaudio.load();
 clickaudio.load();
 resetaudio.load();
